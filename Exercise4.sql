@@ -34,7 +34,7 @@ INSERT INTO Notes (GRADE, Min_Value, Max_Value) VALUES
 (9, 80, 89),
 (10, 90, 100);
 
-SELECT case
+SELECT CASE
 WHEN Notes.GRADE BETWEEN 8 AND 10 THEN NAME
 ELSE "NULL" end as "Name",
 Notes.GRADE as "Grade",

@@ -11,7 +11,6 @@ ORDER BY CASE
 WHEN Value >= 70 THEN Value end DESC,
 CASE when Value < 70 THEN Value END ASC,
 name asc;
-
 ```
 It starts with a CASE WHEN operation which verifies to see if the student has a grade of at least 8 to show their name, if they have a lower grade their name will be "NULL", then we go to show their grade based in the value they have, we do this by use of a LEFT JOIN operation which aim's to get the right grade between the minimal and maximum value listed on the table Notes by the Value the students have, then we ORDER BY two cases, if the grade of the student is 8 or more we order by a descending order, else we order by a ascending order, we also get order by the name in the alphabetical order in case there's two students with the same grade.
 
